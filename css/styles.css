@@ -264,6 +264,13 @@ ul {
   margin-top: 24px;
 }
 
+.mobile-hero-cta {
+  display: none;
+  margin-top: 16px;
+  width: 100%;
+  text-align: center;
+}
+
 .hero-trust {
   display: flex;
   align-items: center;
@@ -382,6 +389,38 @@ ul {
   font-size: 0.8rem;
   color: var(--text-light);
   margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.form-disclaimer svg {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.form-trust-signal {
+  text-align: center;
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.form-trust-quote {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.form-trust-author {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 600;
 }
 
 /* Testimonials */
@@ -606,6 +645,25 @@ ul {
   margin-bottom: 0;
 }
 
+.tier-price {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.tier-price sup {
+  font-size: 1.2rem;
+  font-weight: 700;
+  top: -8px;
+}
+
+.tier-price span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
 .service-tier > p {
   color: var(--text-light);
   font-size: 0.95rem;
@@ -671,6 +729,81 @@ ul {
   letter-spacing: 1px;
 }
 
+/* Plans Section */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.plan-card.featured {
+  border: 2px solid var(--primary);
+  transform: scale(1.04);
+}
+
+.plan-card.featured:hover {
+  transform: scale(1.04) translateY(-4px);
+}
+
+.plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: var(--white);
+  padding: 6px 24px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-card h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.plan-type {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.plan-discount {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.plan-price {
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
 @media (max-width: 992px) {
   .services-tiers {
     grid-template-columns: 1fr 1fr;
@@ -681,10 +814,19 @@ ul {
   .service-tier.featured:hover {
     transform: translateY(-4px);
   }
+  .plan-card.featured {
+    transform: none;
+  }
+  .plan-card.featured:hover {
+    transform: translateY(-4px);
+  }
 }
 
 @media (max-width: 768px) {
   .services-tiers {
+    grid-template-columns: 1fr;
+  }
+  .plans-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1274,6 +1416,10 @@ ul {
     font-size: 1.05rem;
   }
 
+  .mobile-hero-cta {
+    display: inline-flex;
+  }
+
   .hero-trust {
     flex-direction: column;
     align-items: flex-start;
@@ -1289,6 +1435,12 @@ ul {
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px;
   }
 
   .stats-row {

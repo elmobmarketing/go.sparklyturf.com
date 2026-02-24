@@ -195,7 +195,7 @@
       <a href="/" class="logo"><img src="images/sparklyturf-logo.svg" alt="SparklyTurf" class="logo-img"></a>
       <nav class="header-nav" aria-label="Main navigation">
         <a href="#services">Services</a>
-        <a href="#services">Pricing</a>
+        <a href="#plans">Plans</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#faq">FAQ</a>
         <a href="tel:7027637363" class="header-phone">
@@ -216,7 +216,7 @@
   <div class="mobile-nav" id="mobileNav">
     <button class="mobile-nav-close" id="mobileClose" aria-label="Close menu">&times;</button>
     <a href="#services" onclick="closeMobileNav()">Services</a>
-    <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+    <a href="#plans" onclick="closeMobileNav()">Plans</a>
     <a href="#how-it-works" onclick="closeMobileNav()">How It Works</a>
     <a href="#faq" onclick="closeMobileNav()">FAQ</a>
     <a href="tel:7027637363">(702) 763-7363</a>
@@ -264,6 +264,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             (702) 763-7363
           </a>
+          <a href="#quote" class="btn btn-primary btn-lg mobile-hero-cta">Get My Free Quote</a>
         </div>
         <div class="hero-form-wrapper">
           <div class="quote-form-card" id="quoteFormCard">
@@ -272,59 +273,50 @@
               Limited availability this week
             </div>
             <h3>Get Your Free Quote</h3>
-            <p>Fill out the form and we will get back to you within 24 hours.</p>
+            <p>Fill out the form and we will get back to you within 2 hours.</p>
             <form id="quoteForm" class="quote-form" action="https://formsubmit.co/info@sparklyturf.com" method="POST">
               <input type="hidden" name="_subject" value="New Quote Request from SparklyTurf">
               <input type="hidden" name="_next" value="https://go.sparklyturf.com/?submitted=true">
               <input type="hidden" name="_captcha" value="true">
               <div class="form-group">
                 <label for="form-name" class="sr-only">Full Name</label>
-                <input type="text" id="form-name" name="name" class="form-input" placeholder="Full Name" required>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="Full Name" required autocomplete="name">
               </div>
               <div class="form-row">
                 <div class="form-group">
                   <label for="form-phone" class="sr-only">Phone Number</label>
-                  <input type="tel" id="form-phone" name="phone" class="form-input" placeholder="Phone Number" required>
+                  <input type="tel" id="form-phone" name="phone" class="form-input" placeholder="Phone Number" required autocomplete="tel">
                 </div>
                 <div class="form-group">
                   <label for="form-email" class="sr-only">Email Address</label>
-                  <input type="email" id="form-email" name="email" class="form-input" placeholder="Email Address" required>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="form-zip" class="sr-only">Zip Code</label>
-                  <input type="text" id="form-zip" name="zip" class="form-input" placeholder="Zip Code" required pattern="[0-9]{5}" maxlength="5">
-                </div>
-                <div class="form-group">
-                  <label for="form-turf-size" class="sr-only">Turf Size</label>
-                  <select id="form-turf-size" name="turf_size" class="form-select" required>
-                    <option value="" disabled selected>Turf Size</option>
-                    <option value="Under 500 sq ft">Under 500 sq ft</option>
-                    <option value="500-1000 sq ft">500 - 1,000 sq ft</option>
-                    <option value="1000-2000 sq ft">1,000 - 2,000 sq ft</option>
-                    <option value="Over 2000 sq ft">Over 2,000 sq ft</option>
-                    <option value="Not sure">Not sure</option>
-                  </select>
+                  <input type="email" id="form-email" name="email" class="form-input" placeholder="Email Address" required autocomplete="email">
                 </div>
               </div>
               <div class="form-group">
-                <label for="form-concern" class="sr-only">Select Service</label>
-                <select id="form-concern" name="service" class="form-select" required>
-                  <option value="" disabled selected>Select Service</option>
-                  <option value="Refresh Clean">Refresh Clean</option>
-                  <option value="Restore Clean">Restore Clean</option>
-                  <option value="Deep Clean">Deep Clean</option>
+                <label for="form-turf-size" class="sr-only">Turf Size</label>
+                <select id="form-turf-size" name="turf_size" class="form-select">
+                  <option value="" disabled selected>Turf Size (optional)</option>
+                  <option value="Under 500 sq ft">Under 500 sq ft</option>
+                  <option value="500-1000 sq ft">500 - 1,000 sq ft</option>
+                  <option value="1000-2000 sq ft">1,000 - 2,000 sq ft</option>
+                  <option value="Over 2000 sq ft">Over 2,000 sq ft</option>
                   <option value="Not sure">Not sure</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="form-message" class="sr-only">Additional details</label>
-                <textarea id="form-message" name="message" class="form-textarea" placeholder="Additional details (optional)" rows="3"></textarea>
+                <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell us about your turf (optional)" rows="2"></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-lg form-submit">Get My Free Quote</button>
-              <p class="form-disclaimer">No obligation. No spam. We respect your privacy.</p>
+              <p class="form-disclaimer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                100% satisfaction guaranteed. No obligation. No spam.
+              </p>
             </form>
+          </div>
+          <div class="form-trust-signal">
+            <div class="form-trust-quote">"SparklyTurf completely eliminated the pet smell from our backyard. Night and day difference!"</div>
+            <div class="form-trust-author">Sarah M., verified customer</div>
           </div>
         </div>
       </div>
@@ -385,6 +377,7 @@
             </div>
             <h3>Refresh Clean</h3>
           </div>
+          <div class="tier-price"><sup>$</sup>359 <span>/ visit</span></div>
           <p>Essential maintenance to keep your turf looking its best between deeper cleanings.</p>
           <ul class="tier-features">
             <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Detailed Inspection</li>
@@ -403,6 +396,7 @@
             </div>
             <h3>Restore Clean</h3>
           </div>
+          <div class="tier-price"><sup>$</sup>319 <span>/ visit</span></div>
           <p>Complete pet-focused cleaning that eliminates odors and refreshes your turf.</p>
           <p class="tier-includes">Everything in Refresh, plus:</p>
           <ul class="tier-features">
@@ -421,6 +415,7 @@
             </div>
             <h3>Deep Clean</h3>
           </div>
+          <div class="tier-price"><sup>$</sup>279 <span>/ visit</span></div>
           <p>Full restoration that brings your turf back to like-new condition.</p>
           <p class="tier-includes">Everything in Restore, plus:</p>
           <ul class="tier-features">
@@ -432,6 +427,41 @@
             <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Re-Infill</li>
             <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Small Repairs</li>
           </ul>
+        </div>
+      </div>
+      <div class="services-cta animate-in">
+        <a href="#quote" class="btn btn-primary btn-lg">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section class="section plans-section" id="plans" style="background: var(--light-bg);">
+    <div class="container">
+      <div class="section-header animate-in">
+        <span class="section-label">Save More</span>
+        <h2>Get a SparklyTurf Plan and Save More!</h2>
+        <p>Investing in a regular turf maintenance plan can save you time and money in the long run. With our affordable plans, you can ensure your artificial grass stays clean and pristine all year round.</p>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card animate-in">
+          <h3>Monthly</h3>
+          <p class="plan-type">Cleaning Service</p>
+          <div class="plan-discount">30% off</div>
+          <p class="plan-price">$279 Per Service</p>
+        </div>
+        <div class="plan-card featured animate-in">
+          <span class="plan-badge">Best Value</span>
+          <h3>Bi Monthly</h3>
+          <p class="plan-type">Cleaning Service</p>
+          <div class="plan-discount">20% off</div>
+          <p class="plan-price">$319 Per Service</p>
+        </div>
+        <div class="plan-card animate-in">
+          <h3>Quarterly</h3>
+          <p class="plan-type">Cleaning Service</p>
+          <div class="plan-discount">10% off</div>
+          <p class="plan-price">$359 Per Service</p>
         </div>
       </div>
       <div class="services-cta animate-in">
@@ -636,7 +666,7 @@
           <h4>Company</h4>
           <ul>
             <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#services">Pricing</a></li>
+            <li><a href="#plans">Plans</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#quote">Get a Quote</a></li>
           </ul>
