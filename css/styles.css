@@ -32,6 +32,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+  padding-bottom: 52px;
 }
 
 img {
@@ -1694,7 +1695,7 @@ ul {
 
 /* Sticky phone bar mobile */
 .sticky-phone {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1717,12 +1718,3 @@ ul {
   gap: 8px;
 }
 
-@media (max-width: 768px) {
-  .sticky-phone {
-    display: block;
-  }
-
-  body {
-    padding-bottom: 52px;
-  }
-}
