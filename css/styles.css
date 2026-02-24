@@ -135,18 +135,14 @@ ul {
 }
 
 .logo {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--white);
+  display: inline-flex;
+  align-items: center;
   transition: var(--transition);
 }
 
-.logo span {
-  color: var(--primary);
-}
-
-.header.scrolled .logo {
-  color: var(--dark);
+.logo-img {
+  height: 40px;
+  width: auto;
 }
 
 .header-nav {
@@ -210,7 +206,8 @@ ul {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.85), rgba(22, 33, 62, 0.75)), url('../images/hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.85), rgba(22, 33, 62, 0.75)), url('../images/hero-bg.webp') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.85), rgba(22, 33, 62, 0.75)), image-set(url('../images/hero-bg.webp') type('image/webp'), url('../images/hero-bg.jpg') type('image/jpeg')) center/cover no-repeat;
   padding: 120px 0 80px;
 }
 
@@ -1225,6 +1222,94 @@ ul {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 0 0 8px 8px;
+  font-weight: 700;
+  z-index: 10000;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Form Success State */
+.form-success {
+  text-align: center;
+  padding: 40px 32px;
+}
+
+.form-success h3 {
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.form-success p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Social Proof Numbers */
+.social-proof-numbers {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.social-proof-item {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.social-proof-item strong {
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.social-proof-divider {
+  color: rgba(255,255,255,0.25);
+  font-size: 1.2rem;
+}
+
+/* Urgency Badge */
+.urgency-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fef3cd;
+  color: #856404;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 /* Animations */
