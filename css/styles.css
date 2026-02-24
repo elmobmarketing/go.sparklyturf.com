@@ -214,6 +214,14 @@ ul {
   padding: 120px 0 80px;
 }
 
+/* Hero Split Layout */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 48px;
+  align-items: center;
+}
+
 .hero-content {
   max-width: 680px;
 }
@@ -251,11 +259,8 @@ ul {
   line-height: 1.7;
 }
 
-.hero-ctas {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 48px;
+.hero-phone-btn {
+  margin-top: 24px;
 }
 
 .hero-trust {
@@ -278,6 +283,161 @@ ul {
   height: 20px;
   color: var(--primary);
   flex-shrink: 0;
+}
+
+/* Quote Form Card */
+.hero-form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.quote-form-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+}
+
+.quote-form-card h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.quote-form-card > p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #dde1e6;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(147, 194, 68, 0.15);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #999;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.form-disclaimer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+/* Testimonials */
+.testimonials {
+  background: var(--light-bg);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(147, 194, 68, 0.2);
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 16px;
+  color: #f5a623;
+}
+
+.testimonial-quote {
+  font-size: 0.98rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-author strong {
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.testimonial-author span {
+  font-size: 0.85rem;
+  color: var(--text-light);
 }
 
 /* Section styles */
@@ -931,6 +1091,19 @@ ul {
 
 /* Responsive */
 @media (max-width: 992px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-form-wrapper {
+    justify-content: center;
+  }
+
+  .quote-form-card {
+    max-width: 500px;
+  }
+
   .hero h1 {
     font-size: 2.8rem;
   }
@@ -941,7 +1114,8 @@ ul {
 
   .services-grid,
   .pricing-grid,
-  .steps-grid {
+  .steps-grid,
+  .testimonials-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -990,10 +1164,6 @@ ul {
     font-size: 1.05rem;
   }
 
-  .hero-ctas {
-    flex-direction: column;
-  }
-
   .hero-trust {
     flex-direction: column;
     align-items: flex-start;
@@ -1002,7 +1172,12 @@ ul {
 
   .services-grid,
   .pricing-grid,
-  .steps-grid {
+  .steps-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
     grid-template-columns: 1fr;
   }
 
