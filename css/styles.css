@@ -166,6 +166,10 @@ ul {
   color: var(--text);
 }
 
+.header.scrolled .header-nav .btn-primary {
+  color: var(--white);
+}
+
 .header-nav a:hover {
   color: var(--primary);
 }
