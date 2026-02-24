@@ -145,6 +145,10 @@ ul {
   width: auto;
 }
 
+.footer .logo-img {
+  height: 36px;
+}
+
 .header-nav {
   display: flex;
   align-items: center;
