@@ -804,6 +804,12 @@ ul {
   font-weight: 500;
 }
 
+.plan-sqft {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
 @media (max-width: 992px) {
   .services-tiers {
     grid-template-columns: 1fr 1fr;
