@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sparklyturf.com/sitemap.xml
+Sitemap: https://go.sparklyturf.com/sitemap.xml
 
 # AI Bots
 User-agent: GPTBot

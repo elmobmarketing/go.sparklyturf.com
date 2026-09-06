@@ -1,7 +1,10 @@
 # SparklyTurf
 
 ## About
-SparklyTurf is a professional artificial turf cleaning company that specializes in eliminating pet odors, stains, and bacteria from synthetic grass. We use eco-friendly, non-toxic, and pet-safe solutions.
+SparklyTurf is a professional artificial turf cleaning company in Las Vegas, Nevada, that specializes in eliminating pet odors, stains, and bacteria from synthetic grass. We use eco-friendly, non-toxic, and pet-safe solutions.
+
+## Service Areas
+Las Vegas, Henderson, North Las Vegas, Summerlin, Spring Valley, Paradise, Enterprise, Green Valley, and Centennial Hills — the entire Las Vegas Valley.
 
 ## Service Tiers
 
@@ -30,4 +33,5 @@ Everything in Restore, plus: Stain Removal, Power Washing, Urine Extraction, Inf
 ## Contact
 - Phone: (702) 763-7363
 - Email: info@sparklyturf.com
-- Website: https://sparklyturf.com
+- Website: https://go.sparklyturf.com
+- Location: Las Vegas, NV
